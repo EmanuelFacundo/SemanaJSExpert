@@ -1,2 +1,4 @@
 # SemanaJSExpert
- Semana JS Expert com Erick Wendel de 22/03 à 26/03
+ Semana JS Expert com Erick Wendel de 22/03 a 26/03
+
+ Criando interfaces em programas de linha de comando com o pacote Blessed e o padrão Builder
