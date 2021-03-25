@@ -4,11 +4,12 @@ export const constants = {
             MESSAGE_SENT: 'message:sent',
             MESSAGE_RECEIVED: 'message:received',
             ACTIVITYLOG_UPDATE: 'activityLog:update',
-            STATUS_UPDATE: 'status:update'
+            STATUS_UPDATED: 'status:update'
         },
 
         socket: {
-
+            JOIN_ROOM: 'joinRoom',
+            MESSAGE: 'message'
         }
     }
 }

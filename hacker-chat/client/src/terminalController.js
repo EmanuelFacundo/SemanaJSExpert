@@ -24,7 +24,7 @@ export default class TerminalController {
     #onInputReceived(eventEmiter) {
         return function() {
             const message = this.getValue()
-            console.log(message)
+            eventEmiter.emit(constants.events.app.MESSAGE_SENT, message)
             this.clearValue()
         }
     }
@@ -75,7 +75,7 @@ export default class TerminalController {
     #registerEvents(eventEmiter, components) {
         eventEmiter.on(constants.events.app.MESSAGE_RECEIVED, this.#onMessageReceived(components))
         eventEmiter.on(constants.events.app.ACTIVITYLOG_UPDATE, this.#onLogChanged(components))
-        eventEmiter.on(constants.events.app.STATUS_UPDATE, this.#onStatusChanger(components))
+        eventEmiter.on(constants.events.app.STATUS_UPDATED, this.#onStatusChanger(components))
     }
 
     async initializeTable(eventEmiter) {
